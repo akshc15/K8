@@ -1,0 +1,37 @@
+root@ip-172-31-25-247:~# kubectl get ns
+NAME              STATUS   AGE
+default           Active   4m3s
+kube-node-lease   Active   4m5s
+kube-public       Active   4m5s
+kube-system       Active   4m5s
+
+  root@ip-172-31-25-247:~# kubectl create namespace dev
+namespace/dev created
+root@ip-172-31-25-247:~# kubectl get ns
+NAME              STATUS   AGE
+default           Active   17m
+dev               Active   38s
+kube-node-lease   Active   17m
+kube-public       Active   17m
+kube-system       Active   17m
+
+  
+  root@ip-172-31-25-247:~# kubectl run app1 -n dev --image=nginx:latest
+pod/app1 created
+root@ip-172-31-25-247:~# kubectl get pods
+No resources found in default namespace.
+root@ip-172-31-25-247:~# kubectl get pod
+No resources found in default namespace.
+
+  
+  root@ip-172-31-25-247:~# kubectl get pod -n dev
+NAME   READY   STATUS    RESTARTS   AGE
+app1   1/1     Running   0          23s
+
+  
+  root@ip-172-31-25-247:~# kubectl get pod -n dev -o wide
+NAME   READY   STATUS    RESTARTS   AGE   IP               NODE             NOMINATED NODE   READINESS GATES
+app1   1/1     Running   0          91s   192.168.69.129   ip-172-31-81-8   <none>           <none>
+
+
+    

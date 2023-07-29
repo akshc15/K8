@@ -1,0 +1,17 @@
+root@ip-172-31-91-54:~# history
+    1  vi step3.sh
+    2  bash step3.sh
+    3  vi step4.sh
+    4  sh step4.sh
+    5  kubectl get nodes
+    6  hostname -i
+    7  ping $(hostname -i)
+    8  kubectl api-resources
+    9  vi akshay.yaml
+   10  vim akshay.yaml
+   11  kubectl create -f akshay.yaml
+   12  vim akshay.yaml
+   13  kubectl create -f akshay.yaml
+   14  kubectl get po
+   15  cat akshay.yaml
+   16  history

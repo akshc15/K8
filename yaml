@@ -11,3 +11,8 @@ spec:
              -  name: akshay
                 image: nginx:latest
 root@ip-172-31-91-54:~#
+root@ip-172-31-91-54:~# kubectl create -f akshay.yaml
+pod/akshay created
+root@ip-172-31-91-54:~# kubectl get po
+NAME     READY   STATUS    RESTARTS   AGE
+akshay   1/1     Running   0          16s

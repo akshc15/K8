@@ -1,0 +1,13 @@
+root@ip-172-31-91-54:~# cat akshay.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+        name: akshay
+        labels:
+                app: akshay
+                type: fe
+spec:
+        containers:
+             -  name: akshay
+                image: nginx:latest
+root@ip-172-31-91-54:~#
